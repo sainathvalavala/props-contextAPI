@@ -22,8 +22,8 @@ function Counter(props) {
       >
         Decrement
       </button>
-
-      <button onClick={()=>{props.a()}}>child</button>
+{/* send data from child to parent as an argument and the parent receives it */}
+      <button onClick={()=>{props.a("parent")}}>child</button>
     </div>
   );
 }
