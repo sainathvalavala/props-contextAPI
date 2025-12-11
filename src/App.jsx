@@ -2,16 +2,22 @@ import React from "react";
 import Counter from "./Counter";
 
 function App() {
+  function abc(){
+    alert("called")
+  }
   return (
     <div className="border border-5 p-3 m-3 border-primary">
       App
       <div>
-        <Counter></Counter>
+        <button onClick={()=>{abc()}}>Parent</button>
       </div>
       <div>
-        <Counter></Counter>
+        <Counter step={10} a={abc}>100</Counter>
       </div>
-      <div>{Counter()}</div>
+      <div>
+        <Counter step={5} a={abc}>200</Counter>
+      </div>
+      {/* <div>{Counter()}</div> */}
     </div>
   );
 }

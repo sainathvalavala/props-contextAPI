@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 
-function Counter() {
-  let [count, setCount] = useState(0);
+function Counter(props) {
+  console.log(props);
+  let [count, setCount] = useState(+(props.children));
   return (
     <div className="border border-3 border-info m-2 p-2">
       <div>Counter :{count}</div>
       <button
         className="btn btn-success me-2"
         onClick={() => {
-          setCount(count + 1);
+          setCount(count + props.step);
         }}
       >
         Increment
@@ -21,6 +22,8 @@ function Counter() {
       >
         Decrement
       </button>
+
+      <button onClick={()=>{props.a()}}>child</button>
     </div>
   );
 }
