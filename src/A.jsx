@@ -1,12 +1,12 @@
 import React from "react";
-import B from "./B";
+import B from "./B"
 
-function A({ details }) {
+function A() {
   return (
     <div>
-      A<h1>{details.username}</h1>
+      A
       <div className="border border-2 p-2 m-3 border-danger">
-        <B details={details}></B>
+        <B></B>
       </div>
     </div>
   );
