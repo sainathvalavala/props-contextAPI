@@ -3,7 +3,7 @@ import Counter from "./Counter";
 
 function App() {
   function abc(val) {
-    //abc should receive data from parent so created a param named val.
+    //abc should receive data from child so created a param named val.
     alert(`called ${val ? val : " but data not sent from child"}`);
   }
   return (
